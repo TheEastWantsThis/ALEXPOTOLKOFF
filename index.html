@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALEXWERK — Натяжные потолки премиум-класса</title>
+    <title>ALEXPOTOLKOFF — Натяжные потолки премиум-класса</title>
     <meta name="description" content="Эксклюзивный монтаж натяжных потолков премиум-класса с теневым профилем EuroKRAAB и интегрированным световым дизайном по вашему проекту.">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header (Секция 1) -->
+    <!-- Header -->
     <header class="header" id="main-header">
         <div class="header-container">
-            <a href="#" class="logo" id="logo-link">ALEX<span class="gold-text">WERK</span></a>
+            <a href="#" class="logo" id="logo-link">ALEX<span class="gold-text">POTOLKOFF</span></a>
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="#about" class="nav-link">О нас</a></li>
@@ -32,15 +29,13 @@
                 <a href="tel:+79991234567" class="phone-link"><i class="fa-solid fa-phone"></i> +7 (999) 123-45-67</a>
                 <button class="btn btn-cta" id="header-cta-btn">Заказать расчет</button>
                 <button class="burger-menu" id="burger-toggle" aria-label="Открыть меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Modal -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu-overlay">
         <ul class="mobile-nav-list">
             <li><a href="#about" class="mobile-nav-link">О нас</a></li>
@@ -52,14 +47,14 @@
         </ul>
     </div>
 
-    <!-- Hero Section (Секция 2) -->
+    <!-- Hero Section -->
     <section class="hero-section" id="about">
         <div class="hero-bg" style="background-image: url('assets/images/review_4.png');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge" id="hero-badge-item">ПРЕМИАЛЬНЫЙ СВЕТ И ДИЗАЙН</div>
-            <h1 class="hero-title" id="hero-main-title">ALEXWERK</h1>
-            <div class="hero-subtitle" id="hero-sub-title">АЛЕКС ВЕРК</div>
+            <h1 class="hero-title" id="hero-main-title">ALEXPOTOLKOFF</h1>
+            <div class="hero-subtitle" id="hero-sub-title">АЛЕКС ПОТОЛКОВ</div>
             <p class="hero-description">
                 Интеграция передовых профильных систем, скрытого освещения и безупречных полотен по вашему индивидуальному дизайн-проекту.
             </p>
@@ -81,7 +76,7 @@
         </div>
     </section>
 
-    <!-- Construction Section (Секция 3) — Sticky Scroll Layout -->
+    <!-- Construction Section -->
     <section class="construction-section" id="construction">
         <div class="section-container">
             <div class="section-header text-center">
@@ -91,142 +86,308 @@
             </div>
         </div>
 
-        <div class="construction-sticky-layout">
-            <!-- Left: Sticky SVG Diagram -->
-            <div class="sticky-visual-side">
-                <div class="schema-card">
-                    <svg id="ceiling-svg" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <filter id="glow-gold" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="8" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
-                            <filter id="glow-amber" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="12" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
-                            <linearGradient id="beam-grad" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#ffa500" stop-opacity="0.6" />
-                                <stop offset="100%" stop-color="#ffa500" stop-opacity="0" />
-                            </linearGradient>
-                            <linearGradient id="canvas-glow-grad" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="var(--accent-gold)" stop-opacity="0.25" />
-                                <stop offset="50%" stop-color="var(--accent-gold)" stop-opacity="0.08" />
-                                <stop offset="100%" stop-color="var(--accent-gold)" stop-opacity="0" />
-                            </linearGradient>
-                        </defs>
+        <div class="construction-stages">
 
-                        <path d="M 50,420 L 50,220 L 250,100 L 250,420" fill="none" stroke="#1c1c1f" stroke-width="1" />
-                        <path d="M 450,420 L 450,220 L 250,100" fill="none" stroke="#1c1c1f" stroke-width="1" />
-
-                        <g id="svg-profile" class="svg-element active">
-                            <polygon points="50,220 250,100 450,220 250,340" fill="none" stroke="#222" stroke-width="5" />
-                            <polygon points="50,220 250,100 450,220 250,340" fill="none" stroke="#3a3a3c" stroke-width="2" />
-                            <polygon class="glow-effect" points="50,220 250,100 450,220 250,340" fill="none" stroke="var(--accent-gold)" stroke-width="2.5" opacity="0" filter="url(#glow-gold)" />
-                            <path class="arrow-marker" d="M 40,210 L 120,185" stroke="var(--accent-gold)" stroke-width="1" fill="none" />
-                            <circle cx="120" cy="185" r="2.5" fill="var(--accent-gold)" />
-                            <text class="step-label" x="30" y="214" fill="var(--accent-gold)" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" text-anchor="end">1. ПРОФИЛЬНЫЙ КАРКАС</text>
-                        </g>
-
-                        <g id="svg-light" class="svg-element">
-                            <line x1="160" y1="180" x2="340" y2="180" stroke="#1c1c1e" stroke-width="8" stroke-linecap="round" />
-                            <line class="glow-effect" x1="160" y1="180" x2="340" y2="180" stroke="var(--accent-gold)" stroke-width="2.5" stroke-linecap="round" opacity="0" filter="url(#glow-gold)" />
-                            <ellipse cx="250" cy="220" rx="70" ry="28" fill="none" stroke="#222" stroke-width="4" />
-                            <ellipse class="glow-effect" cx="250" cy="220" rx="70" ry="28" fill="none" stroke="#fff" stroke-width="2.5" opacity="0" filter="url(#glow-gold)" />
-                            <polygon class="light-beam" points="180,220 320,220 390,390 110,390" fill="url(#beam-grad)" opacity="0" style="mix-blend-mode: screen;" />
-                            <path class="arrow-marker" d="M 40,270 L 180,220" stroke="var(--accent-gold)" stroke-width="1" fill="none" />
-                            <circle cx="180" cy="220" r="2.5" fill="var(--accent-gold)" />
-                            <text class="step-label" x="30" y="274" fill="var(--accent-gold)" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" text-anchor="end">2. ИНТЕГРИРОВАННЫЙ СВЕТ</text>
-                        </g>
-
-                        <g id="svg-canvas" class="svg-element">
-                            <polygon points="50,220 250,100 450,220 250,340" fill="rgba(245, 245, 247, 0.05)" />
-                            <polygon class="glow-effect" points="50,220 250,100 450,220 250,340" fill="url(#canvas-glow-grad)" opacity="0" />
-                            <polygon class="glow-effect" points="50,220 250,100 450,220 250,340" fill="none" stroke="var(--accent-gold)" stroke-width="2.5" opacity="0" filter="url(#glow-gold)" />
-                            <path class="arrow-marker" d="M 40,330 L 150,290" stroke="var(--accent-gold)" stroke-width="1" fill="none" />
-                            <circle cx="150" cy="290" r="2.5" fill="var(--accent-gold)" />
-                            <text class="step-label" x="30" y="334" fill="var(--accent-gold)" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" text-anchor="end">3. НАТЯЖНОЕ ПОЛОТНО</text>
-                        </g>
-                    </svg>
-                    <div class="stage-progress">
-                        <div class="stage-dot active" data-stage="profile"></div>
-                        <div class="stage-dot" data-stage="lighting"></div>
-                        <div class="stage-dot" data-stage="canvas"></div>
+            <!-- Stage 1: Profile — текст слева, схема справа -->
+            <div class="stage-row">
+                <div class="stage-text-col">
+                    <div class="stage-number">01</div>
+                    <div class="pane-tag">Основа конструкции</div>
+                    <h3 class="pane-title">Высокотехнологичный профиль</h3>
+                    <p class="pane-text">
+                        Несущая конструкция по периметру стен. Мы устанавливаем оригинальный алюминиевый профиль <strong>EuroKRAAB</strong>, создающий безупречный теневой шов шириной 6 мм.
+                    </p>
+                    <ul class="pane-list">
+                        <li><i class="fa-solid fa-check gold-text"></i> Ровный теневой зазор без резиновых маскировочных вставок</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Жёсткий алюминиевый каркас предотвращает провисание</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Безупречная стыковка и геометрия углов любой сложности</li>
+                    </ul>
+                </div>
+                <div class="stage-visual-col">
+                    <div class="schema-card">
+                        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="gp" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="5" result="b"/>
+                                    <feComposite in="SourceGraphic" in2="b" operator="over"/>
+                                </filter>
+                                <linearGradient id="ps" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#303040"/>
+                                    <stop offset="100%" stop-color="#1a1a24"/>
+                                </linearGradient>
+                                <linearGradient id="pw" x1="1" y1="0" x2="0" y2="0">
+                                    <stop offset="0%" stop-color="#1e1e2a"/>
+                                    <stop offset="100%" stop-color="#0e0e18"/>
+                                </linearGradient>
+                                <linearGradient id="pm" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#d4d4e8"/>
+                                    <stop offset="40%" stop-color="#eaeaf6"/>
+                                    <stop offset="100%" stop-color="#8888a0"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="280" fill="#090910"/>
+                            <!-- Wall -->
+                            <rect x="0" y="0" width="72" height="280" fill="url(#pw)" stroke="#15151e" stroke-width="1"/>
+                            <line x1="8" y1="40"  x2="64" y2="40"  stroke="#12121c" stroke-width="0.8"/>
+                            <line x1="8" y1="80"  x2="64" y2="80"  stroke="#12121c" stroke-width="0.8"/>
+                            <line x1="8" y1="120" x2="64" y2="120" stroke="#12121c" stroke-width="0.8"/>
+                            <line x1="8" y1="160" x2="64" y2="160" stroke="#12121c" stroke-width="0.8"/>
+                            <line x1="8" y1="200" x2="64" y2="200" stroke="#12121c" stroke-width="0.8"/>
+                            <line x1="8" y1="240" x2="64" y2="240" stroke="#12121c" stroke-width="0.8"/>
+                            <!-- Slab -->
+                            <rect x="72" y="0" width="328" height="64" fill="url(#ps)" stroke="#22222e" stroke-width="1"/>
+                            <line x1="84" y1="14" x2="390" y2="14" stroke="#1e1e2c" stroke-width="0.7"/>
+                            <line x1="84" y1="30" x2="390" y2="30" stroke="#1e1e2c" stroke-width="0.7"/>
+                            <line x1="84" y1="48" x2="390" y2="48" stroke="#1e1e2c" stroke-width="0.7"/>
+                            <circle cx="148" cy="32" r="9" fill="#242432" stroke="#3a3a4e" stroke-width="1.5"/>
+                            <circle cx="148" cy="32" r="3.5" fill="#1a1a28"/>
+                            <circle cx="250" cy="32" r="9" fill="#242432" stroke="#3a3a4e" stroke-width="1.5"/>
+                            <circle cx="250" cy="32" r="3.5" fill="#1a1a28"/>
+                            <circle cx="352" cy="32" r="9" fill="#242432" stroke="#3a3a4e" stroke-width="1.5"/>
+                            <circle cx="352" cy="32" r="3.5" fill="#1a1a28"/>
+                            <!-- Profile arm -->
+                            <rect x="72" y="64" width="204" height="50" fill="url(#pm)" stroke="#9090a8" stroke-width="1" rx="2"/>
+                            <!-- Profile clip -->
+                            <rect x="72" y="114" width="46" height="106" fill="url(#pm)" stroke="#9090a8" stroke-width="1" rx="2"/>
+                            <!-- Bead slot -->
+                            <rect x="75" y="214" width="40" height="7" fill="#5a5a70" stroke="#8888a0" stroke-width="0.7" rx="1.5"/>
+                            <!-- Screw 1 -->
+                            <circle cx="100" cy="96" r="9" fill="#52526a" stroke="#8888a0" stroke-width="1"/>
+                            <circle cx="100" cy="96" r="4" fill="#3a3a52"/>
+                            <line x1="90" y1="96" x2="110" y2="96" stroke="#22223a" stroke-width="2.2"/>
+                            <line x1="100" y1="86" x2="100" y2="106" stroke="#22223a" stroke-width="2.2"/>
+                            <!-- Screw 2 -->
+                            <circle cx="218" cy="96" r="8" fill="#52526a" stroke="#8888a0" stroke-width="0.9"/>
+                            <circle cx="218" cy="96" r="3.5" fill="#3a3a52"/>
+                            <line x1="209" y1="96" x2="227" y2="96" stroke="#22223a" stroke-width="2"/>
+                            <line x1="218" y1="87" x2="218" y2="105" stroke="#22223a" stroke-width="2"/>
+                            <!-- Gold glow on profile -->
+                            <rect x="72" y="64" width="204" height="50" fill="none" stroke="var(--accent-gold)" stroke-width="1.2" opacity="0.45" filter="url(#gp)" rx="2"/>
+                            <rect x="72" y="114" width="46" height="106" fill="none" stroke="var(--accent-gold)" stroke-width="1.2" opacity="0.45" filter="url(#gp)" rx="2"/>
+                            <!-- Shadow gap annotation -->
+                            <line x1="72" y1="236" x2="72" y2="264" stroke="var(--accent-gold)" stroke-width="1.2"/>
+                            <line x1="118" y1="236" x2="118" y2="264" stroke="var(--accent-gold)" stroke-width="1.2"/>
+                            <line x1="72" y1="250" x2="118" y2="250" stroke="var(--accent-gold)" stroke-width="1"/>
+                            <line x1="75" y1="240" x2="75" y2="260" stroke="var(--accent-gold)" stroke-width="0.8"/>
+                            <line x1="115" y1="240" x2="115" y2="260" stroke="var(--accent-gold)" stroke-width="0.8"/>
+                            <text x="95" y="276" fill="var(--accent-gold)" font-family="'Montserrat',sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.05em">ТЕНЕВОЙ ШОВ 6 мм</text>
+                            <!-- Profile label -->
+                            <line x1="276" y1="84" x2="314" y2="56" stroke="var(--accent-gold)" stroke-width="0.9"/>
+                            <circle cx="276" cy="84" r="2.5" fill="var(--accent-gold)"/>
+                            <text x="318" y="53" fill="var(--accent-gold)" font-family="'Montserrat',sans-serif" font-size="9" font-weight="700" letter-spacing="0.05em">EuroKRAAB</text>
+                        </svg>
+                        <div class="schema-label">Алюминиевый профиль — теневой шов 6 мм</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Scrollable stage blocks -->
-            <div class="stages-scroll-side">
-
-                <div class="stage-block" id="stage-profile" data-stage="profile">
-                    <div class="stage-content">
-                        <div class="stage-number">01</div>
-                        <div class="pane-tag">Основа конструкции</div>
-                        <h3 class="pane-title">Высокотехнологичный профиль</h3>
-                        <p class="pane-text">
-                            Несущая конструкция по периметру стен. Мы устанавливаем оригинальный алюминиевый профиль <strong>EuroKRAAB</strong>, создающий безупречный теневой шов шириной 6 мм.
-                        </p>
-                        <ul class="pane-list">
-                            <li><i class="fa-solid fa-check gold-text"></i> Ровный теневой зазор без резиновых маскировочных вставок</li>
-                            <li><i class="fa-solid fa-check gold-text"></i> Жесткий алюминиевый каркас предотвращает провисание</li>
-                            <li><i class="fa-solid fa-check gold-text"></i> Безупречная стыковка и геометрия углов любой сложности</li>
-                        </ul>
+            <!-- Stage 2: Lighting — схема слева, текст справа -->
+            <div class="stage-row stage-row-reverse">
+                <div class="stage-text-col">
+                    <div class="stage-number">02</div>
+                    <div class="pane-tag">Атмосфера и сценарии</div>
+                    <h3 class="pane-title">Интегрированный свет</h3>
+                    <p class="pane-text">
+                        Освещение монтируется в конструкцию согласно вашему дизайн-проекту. Мы интегрируем любые современные решения: магнитные треки, световые линии или контурные ниши.
+                    </p>
+                    <ul class="pane-list">
+                        <li><i class="fa-solid fa-check gold-text"></i> Магнитные шинопроводы для перестановки светильников</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Мягкая светодиодная подсветка по периметру шва</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Полная совместимость с системами «Умного дома»</li>
+                    </ul>
+                </div>
+                <div class="stage-visual-col">
+                    <div class="schema-card">
+                        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="gl" x="-80%" y="-80%" width="260%" height="260%">
+                                    <feGaussianBlur stdDeviation="18" result="b"/>
+                                    <feComposite in="SourceGraphic" in2="b" operator="over"/>
+                                </filter>
+                                <linearGradient id="ls" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#303040"/>
+                                    <stop offset="100%" stop-color="#1a1a24"/>
+                                </linearGradient>
+                                <linearGradient id="lm" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#d4d4e8"/>
+                                    <stop offset="40%" stop-color="#eaeaf6"/>
+                                    <stop offset="100%" stop-color="#8888a0"/>
+                                </linearGradient>
+                                <linearGradient id="lp" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#1a3d1a"/>
+                                    <stop offset="100%" stop-color="#0f2a0f"/>
+                                </linearGradient>
+                                <linearGradient id="lb" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffd580" stop-opacity="0.38"/>
+                                    <stop offset="65%" stop-color="#ffa500" stop-opacity="0.06"/>
+                                    <stop offset="100%" stop-color="#ffa500" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="280" fill="#090910"/>
+                            <!-- Slab -->
+                            <rect x="0" y="0" width="400" height="52" fill="url(#ls)" stroke="#22222e" stroke-width="1"/>
+                            <line x1="0" y1="13" x2="400" y2="13" stroke="#1e1e2c" stroke-width="0.7"/>
+                            <line x1="0" y1="28" x2="400" y2="28" stroke="#1e1e2c" stroke-width="0.7"/>
+                            <line x1="0" y1="42" x2="400" y2="42" stroke="#1e1e2c" stroke-width="0.7"/>
+                            <!-- Profile arm full width -->
+                            <rect x="0" y="52" width="400" height="46" fill="url(#lm)" stroke="#9090a8" stroke-width="0.8" rx="1"/>
+                            <!-- PCB board -->
+                            <rect x="52" y="55" width="296" height="25" fill="url(#lp)" rx="2" stroke="#2a5a2a" stroke-width="0.8"/>
+                            <line x1="58" y1="66" x2="342" y2="66" stroke="#1e4a1e" stroke-width="0.7"/>
+                            <!-- LED chips (8) -->
+                            <rect x="57"  y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="91"  y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="125" y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="159" y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="193" y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="227" y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="261" y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <rect x="295" y="57" width="26" height="19" fill="#fff8e0" rx="2" opacity="0.97"/>
+                            <!-- LED warm glow -->
+                            <rect x="52" y="55" width="296" height="25" fill="none" stroke="#ffd580" stroke-width="6" opacity="0.65" filter="url(#gl)" rx="2"/>
+                            <!-- Light beam downward -->
+                            <polygon points="0,98 400,98 400,280 0,280" fill="url(#lb)"/>
+                            <!-- Labels -->
+                            <text x="200" y="152" fill="var(--accent-gold)" font-family="'Montserrat',sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.08em">СВЕТОДИОДНАЯ ЛЕНТА</text>
+                            <text x="200" y="172" fill="rgba(196,146,42,0.65)" font-family="'Montserrat',sans-serif" font-size="9" text-anchor="middle">2700K — 6500K · CRI 90+</text>
+                            <ellipse cx="200" cy="278" rx="200" ry="50" fill="rgba(255,210,80,0.04)"/>
+                        </svg>
+                        <div class="schema-label">LED-лента в профиле — тёплый рассеянный свет</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="stage-block" id="stage-lighting" data-stage="lighting">
-                    <div class="stage-content">
-                        <div class="stage-number">02</div>
-                        <div class="pane-tag">Атмосфера и сценарии</div>
-                        <h3 class="pane-title">Интегрированный свет</h3>
-                        <p class="pane-text">
-                            Освещение монтируется в конструкцию согласно вашему дизайн-проекту. Мы интегрируем любые современные решения: магнитные треки, световые линии или контурные ниши.
-                        </p>
-                        <ul class="pane-list">
-                            <li><i class="fa-solid fa-check gold-text"></i> Магнитные шинопроводы для перестановки светильников</li>
-                            <li><i class="fa-solid fa-check gold-text"></i> Мягкая светодиодная подсветка по периметру шва</li>
-                            <li><i class="fa-solid fa-check gold-text"></i> Полная совместимость с системами «Умного дома»</li>
-                        </ul>
+            <!-- Stage 3: Canvas — текст слева, схема справа -->
+            <div class="stage-row">
+                <div class="stage-text-col">
+                    <div class="stage-number">03</div>
+                    <div class="pane-tag">Финишное покрытие</div>
+                    <h3 class="pane-title">Декоративное полотно</h3>
+                    <p class="pane-text">
+                        Натяжная плоскость премиум-класса. Вы можете выбрать матовое, глянцевое или сатиновое полотно, а также полотна с узором согласно вашей дизайнерской концепции.
+                    </p>
+                    <ul class="pane-list">
+                        <li><i class="fa-solid fa-check gold-text"></i> Экологически чистые полотна MSD Premium и Teqtum (класс А+)</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Противопожарная безопасность (сертификат класса KM2)</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Абсолютная влагостойкость и защита от протечек сверху</li>
+                    </ul>
+                    <div class="stage-cta">
+                        <button class="btn btn-primary" id="tab-next-btn">Заказать замер <i class="fa-solid fa-chevron-right"></i></button>
                     </div>
                 </div>
-
-                <div class="stage-block" id="stage-canvas" data-stage="canvas">
-                    <div class="stage-content">
-                        <div class="stage-number">03</div>
-                        <div class="pane-tag">Финишное покрытие</div>
-                        <h3 class="pane-title">Декоративное полотно</h3>
-                        <p class="pane-text">
-                            Натяжная плоскость премиум-класса. Вы можете выбрать матовое, глянцевое или сатиновое полотно, а также полотна с узором согласно вашей дизайнерской концепции.
-                        </p>
-                        <ul class="pane-list">
-                            <li><i class="fa-solid fa-check gold-text"></i> Экологически чистые полотна MSD Premium и Teqtum (класс А+)</li>
-                            <li><i class="fa-solid fa-check gold-text"></i> Противопожарная безопасность (сертификат класса KM2)</li>
-                            <li><i class="fa-solid fa-check gold-text"></i> Абсолютная влагостойкость и защита от протечек сверху</li>
-                        </ul>
-                        <div class="stage-cta">
-                            <button class="btn btn-primary" id="tab-next-btn">Заказать замер <i class="fa-solid fa-chevron-right"></i></button>
-                        </div>
+                <div class="stage-visual-col">
+                    <div class="schema-card">
+                        <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="cm" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#d4d4e8"/>
+                                    <stop offset="40%" stop-color="#eaeaf6"/>
+                                    <stop offset="100%" stop-color="#8888a0"/>
+                                </linearGradient>
+                                <linearGradient id="cv-mat" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#e4e4f0"/>
+                                    <stop offset="100%" stop-color="#ccccd8"/>
+                                </linearGradient>
+                                <linearGradient id="cv-gls" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="25%" stop-color="#f0f0f8"/>
+                                    <stop offset="100%" stop-color="#b8b8cc"/>
+                                </linearGradient>
+                                <linearGradient id="cv-sat" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#f0f0f8"/>
+                                    <stop offset="50%" stop-color="#dcdce8"/>
+                                    <stop offset="100%" stop-color="#c4c4d4"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="260" fill="#090910"/>
+                            <!-- Profile arm stub -->
+                            <rect x="0" y="8" width="86" height="40" fill="url(#cm)" stroke="#9090a8" stroke-width="0.8" rx="2"/>
+                            <!-- Profile clip -->
+                            <rect x="0" y="48" width="36" height="62" fill="url(#cm)" stroke="#9090a8" stroke-width="0.8" rx="2"/>
+                            <!-- Bead slot -->
+                            <rect x="2" y="106" width="32" height="6" fill="#5a5a70" stroke="#8888a0" stroke-width="0.6" rx="1.5"/>
+                            <!-- Canvas bead -->
+                            <rect x="0" y="104" width="38" height="14" fill="url(#cm)" stroke="#a0a0b8" stroke-width="0.8" rx="2"/>
+                            <!-- Canvas film -->
+                            <rect x="38" y="104" width="362" height="16" fill="url(#cv-mat)"/>
+                            <rect x="38" y="104" width="362" height="4" fill="rgba(255,255,255,0.5)"/>
+                            <line x1="38" y1="120" x2="400" y2="120" stroke="rgba(0,0,0,0.22)" stroke-width="1"/>
+                            <line x1="90"  y1="105" x2="90"  y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <line x1="140" y1="105" x2="140" y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <line x1="190" y1="105" x2="190" y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <line x1="240" y1="105" x2="240" y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <line x1="290" y1="105" x2="290" y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <line x1="340" y1="105" x2="340" y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <line x1="390" y1="105" x2="390" y2="119" stroke="rgba(0,0,0,0.07)" stroke-width="0.8"/>
+                            <!-- Swatches label -->
+                            <text x="200" y="145" fill="rgba(196,146,42,0.6)" font-family="'Montserrat',sans-serif" font-size="7.5" font-weight="700" text-anchor="middle" letter-spacing="0.15em">ВИДЫ ПОЛОТЕН</text>
+                            <!-- Matte -->
+                            <rect x="20"  y="156" width="100" height="74" fill="url(#cv-mat)" stroke="rgba(196,146,42,0.45)" stroke-width="0.8" rx="5"/>
+                            <text x="70"  y="200" fill="#222" font-family="'Montserrat',sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Матовый</text>
+                            <!-- Gloss -->
+                            <rect x="150" y="156" width="100" height="74" fill="url(#cv-gls)" stroke="rgba(196,146,42,0.45)" stroke-width="0.8" rx="5"/>
+                            <rect x="150" y="156" width="100" height="18" fill="rgba(255,255,255,0.65)" rx="5"/>
+                            <text x="200" y="200" fill="#222" font-family="'Montserrat',sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Глянцевый</text>
+                            <!-- Satin -->
+                            <rect x="280" y="156" width="100" height="74" fill="url(#cv-sat)" stroke="rgba(196,146,42,0.45)" stroke-width="0.8" rx="5"/>
+                            <line x1="286" y1="162" x2="374" y2="224" stroke="rgba(255,255,255,0.18)" stroke-width="2.5"/>
+                            <line x1="286" y1="178" x2="374" y2="224" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+                            <text x="330" y="200" fill="#222" font-family="'Montserrat',sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Сатин</text>
+                        </svg>
+                        <div class="schema-label">Полотно MSD Premium / Teqtum — класс А+</div>
                     </div>
                 </div>
+            </div>
 
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section" id="founder">
+        <div class="section-container">
+            <div class="founder-layout">
+                <div class="founder-photo-col">
+                    <div class="founder-photo-wrap">
+                        <img src="assets/images/founder.jpg" alt="Александр Тихонов — основатель ALEXPOTOLKOFF" class="founder-photo">
+                    </div>
+                </div>
+                <div class="founder-text-col">
+                    <div class="founder-quote-mark">"</div>
+                    <blockquote class="founder-quote">
+                        Привет! Я — главный замерщик и основатель компании. Приеду к вам с образцами профилей и помогу подобрать идеальный свет для вашего пространства.
+                    </blockquote>
+                    <div class="founder-divider"></div>
+                    <div class="founder-identity">
+                        <h3 class="founder-name">Александр Тихонов</h3>
+                        <p class="founder-role">Основатель &amp; главный замерщик</p>
+                    </div>
+                    <ul class="founder-facts">
+                        <li>
+                            <span class="founder-fact-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                            <span>Образование: архитектор — <strong>ГАСУ</strong> (Санкт-Петербургский государственный архитектурно-строительный университет)</span>
+                        </li>
+                        <li>
+                            <span class="founder-fact-icon"><i class="fa-solid fa-helmet-safety"></i></span>
+                            <span>Более <strong>10 лет</strong> опыта в строительстве и отделке</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" id="founder-cta-btn">Записаться на замер</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section (Секция 4) -->
+    <!-- Reviews Section -->
     <section class="reviews-section" id="reviews">
         <div class="section-container">
             <div class="section-header text-center">
                 <span class="section-label">Портфолио проектов</span>
-                <h2 class="section-title">Отзывы клиентов & Реализованные объекты</h2>
+                <h2 class="section-title">Отзывы клиентов &amp; Реализованные объекты</h2>
                 <div class="title-separator"></div>
             </div>
 
-            <!-- Review Cards Grid -->
             <div class="reviews-grid">
-                
-                <!-- Review 1 -->
+
                 <div class="review-card">
                     <div class="review-image-wrapper">
                         <img src="assets/images/review_1.png" alt="Гостиная с трековым освещением и люстрой" class="review-img">
@@ -236,21 +397,14 @@
                     </div>
                     <div class="review-body">
                         <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <h4 class="review-client">Александр Д.</h4>
                         <span class="review-project">Дизайнерский свет в гостиной • Крестовский остров</span>
-                        <p class="review-text">
-                            «Обратился в Alex Werk по рекомендации дизайнера. Стояла задача установить теневой потолок и интегрировать большую кольцевую люстру по центру вместе с черными магнитными треками. Результат просто восхитительный. Монтажники сделали идеальные углы, зазор ровный как струна. Рекомендую.»
-                        </p>
+                        <p class="review-text">«Обратился в Alex Werk по рекомендации дизайнера. Стояла задача установить теневой потолок и интегрировать большую кольцевую люстру по центру вместе с черными магнитными треками. Результат просто восхитительный. Монтажники сделали идеальные углы, зазор ровный как струна. Рекомендую.»</p>
                     </div>
                 </div>
 
-                <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-image-wrapper">
                         <img src="assets/images/review_2.png" alt="Кухня со встроенной световой линией" class="review-img">
@@ -260,21 +414,14 @@
                     </div>
                     <div class="review-body">
                         <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <h4 class="review-client">Екатерина М.</h4>
                         <span class="review-project">Контурный свет на кухне • Петроградская сторона</span>
-                        <p class="review-text">
-                            «Световая линия, переходящая со стены на потолок — это хит моей новой квартиры. Ребята из Alex Werk спроектировали профиль так, чтобы рассеиватель смотрелся единым целым. Потолок матовый, очень благородный, от штукатурки не отличить. Сделали за 2 дня во всей квартире.»
-                        </p>
+                        <p class="review-text">«Световая линия, переходящая со стены на потолок — это хит моей новой квартиры. Ребята из Alex Werk спроектировали профиль так, чтобы рассеиватель смотрелся единым целым. Потолок матовый, очень благородный, от штукатурки не отличить. Сделали за 2 дня во всей квартире.»</p>
                     </div>
                 </div>
 
-                <!-- Review 3 -->
                 <div class="review-card">
                     <div class="review-image-wrapper">
                         <img src="assets/images/review_3.png" alt="Темный коридор со встроенными световыми полосами" class="review-img">
@@ -284,21 +431,14 @@
                     </div>
                     <div class="review-body">
                         <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <h4 class="review-client">Михаил К.</h4>
                         <span class="review-project">Геометрический свет в прихожей • Васильевский остров</span>
-                        <p class="review-text">
-                            «Захотели в коридор темные стены и ломаные световые линии на потолке. Для такой работы нужны золотые руки, так как малейший косяк сразу виден при ярком свете. Мастера справились на отлично. Полотно натянули идеально, стыков светодиодных лент не видно вообще. Очень доволен качеством.»
-                        </p>
+                        <p class="review-text">«Захотели в коридор темные стены и ломаные световые линии на потолке. Для такой работы нужны золотые руки, так как малейший косяк сразу виден при ярком свете. Мастера справились на отлично. Полотно натянули идеально, стыков светодиодных лент не видно вообще. Очень доволен качеством.»</p>
                     </div>
                 </div>
 
-                <!-- Review 4 -->
                 <div class="review-card">
                     <div class="review-image-wrapper">
                         <img src="assets/images/review_4.png" alt="Гостиная с тремя люстрами-кольцами" class="review-img">
@@ -308,17 +448,11 @@
                     </div>
                     <div class="review-body">
                         <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <h4 class="review-client">Светлана В.</h4>
                         <span class="review-project">Гостиная премиум-класса • Золотой треугольник</span>
-                        <p class="review-text">
-                            «Ребята монтировали потолки во всем доме, но гостиная — это любимое место. Сочетание скрытого карниза для штор с подсветкой, теневого профиля по краям и трех стильных колец-люстр выглядит безумно дорого и красиво. Сервис премиальный: вежливые менеджеры, чистая работа, гарантия 15 лет.»
-                        </p>
+                        <p class="review-text">«Ребята монтировали потолки во всем доме, но гостиная — это любимое место. Сочетание скрытого карниза для штор с подсветкой, теневого профиля по краям и трех стильных колец-люстр выглядит безумно дорого и красиво. Сервис премиальный: вежливые менеджеры, чистая работа, гарантия 15 лет.»</p>
                     </div>
                 </div>
 
@@ -326,26 +460,24 @@
         </div>
     </section>
 
-    <!-- Lightbox Modal for Reviews -->
+    <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox-modal">
         <span class="lightbox-close" id="lightbox-close-btn">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
         <div id="lightbox-caption"></div>
     </div>
 
-    <!-- Contact & Application Section (Секция 5) -->
+    <!-- Contact Section -->
     <section class="contact-section" id="contacts">
         <div class="section-container">
             <div class="contact-grid">
-                
-                <!-- Left info column -->
+
                 <div class="contact-info">
                     <span class="section-label">Свяжитесь с нами</span>
                     <h2 class="contact-title">Обсудим детали вашего проекта</h2>
                     <p class="contact-text">
                         Запишитесь на профессиональный бесплатный замер и консультацию инженера. Мы привезем образцы профилей, полотен и светильников прямо к вам на объект.
                     </p>
-                    
                     <div class="info-list">
                         <div class="info-item">
                             <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
@@ -365,37 +497,32 @@
                             <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
                             <div class="info-content">
                                 <h5>Электронная почта</h5>
-                                <p><a href="mailto:info@alexwerk.ru">info@alexwerk.ru</a></p>
+                                <p><a href="mailto:info@alexpotolkoff.ru">info@alexpotolkoff.ru</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Form column -->
                 <div class="contact-form-container">
                     <form class="lead-form" id="lead-form">
                         <h3 class="form-title">Запись на замер</h3>
                         <p class="form-subtitle">Заполните форму, и мы свяжемся с вами в течение 15 минут</p>
-                        
                         <div class="form-group">
                             <label for="user-name" class="form-label">Ваше имя</label>
                             <input type="text" id="user-name" class="form-control" placeholder="Иван Иванов" required>
                             <span class="error-msg" id="name-error">Пожалуйста, введите ваше имя</span>
                         </div>
-
                         <div class="form-group">
                             <label for="user-phone" class="form-label">Номер телефона</label>
                             <input type="tel" id="user-phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
                             <span class="error-msg" id="phone-error">Введите корректный номер телефона</span>
                         </div>
-
                         <div class="form-group checkbox-group">
                             <input type="checkbox" id="user-agreement" required checked>
                             <label for="user-agreement" class="checkbox-label">
                                 Я согласен на обработку персональных данных в соответствии с <a href="#" class="gold-text">политикой конфиденциальности</a>
                             </label>
                         </div>
-
                         <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-lead-btn">
                             Оставить заявку <i class="fa-solid fa-chevron-right"></i>
                         </button>
@@ -414,9 +541,9 @@
                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                 <h3 class="modal-title">Заявка успешно принята!</h3>
                 <p class="modal-text">
-                    Спасибо, <span id="success-client-name" class="gold-text font-weight-bold"></span>. 
-                    Наш технический специалист уже получил уведомление и свяжется с вами по номеру 
-                    <span id="success-client-phone" class="gold-text font-weight-bold"></span> 
+                    Спасибо, <span id="success-client-name" class="gold-text font-weight-bold"></span>.
+                    Наш специалист свяжется с вами по номеру
+                    <span id="success-client-phone" class="gold-text font-weight-bold"></span>
                     в течение 15 минут для подтверждения времени замера.
                 </p>
                 <button class="btn btn-primary" id="success-modal-ok-btn">Отлично</button>
@@ -428,7 +555,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo-section">
-                <a href="#" class="logo">ALEX<span class="gold-text">WERK</span></a>
+                <a href="#" class="logo">ALEX<span class="gold-text">POTOLKOFF</span></a>
                 <p class="footer-tagline">Натяжные потолки премиального качества с гарантией 15 лет</p>
             </div>
             <div class="footer-links">
@@ -441,13 +568,12 @@
                 </ul>
             </div>
             <div class="footer-copy">
-                <p>&copy; 2026 ALEXWERK. Все права защищены.</p>
+                <p>&copy; 2026 ALEXPOTOLKOFF. Все права защищены.</p>
                 <p class="developer-credit">Разработано с акцентом на качество</p>
             </div>
         </div>
     </footer>
 
-    <!-- Custom JS -->
     <script src="app.js"></script>
 </body>
 </html>

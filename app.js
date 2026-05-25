@@ -73,52 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================================
-    // 3. STICKY SCROLL CONSTRUCTION DIAGRAM
+    // 3. CONSTRUCTION & FOUNDER CTA BUTTONS
     // =========================================================================
-    const svgProfile = document.getElementById('svg-profile');
-    const svgLight = document.getElementById('svg-light');
-    const svgCanvas = document.getElementById('svg-canvas');
-    const stageDots = document.querySelectorAll('.stage-dot');
-    const stageBlocks = document.querySelectorAll('.stage-block');
     const tabNextBtn = document.getElementById('tab-next-btn');
-
-    function activateSvgLayer(stageKey) {
-        if (stageKey === 'profile') {
-            svgProfile.classList.add('active');
-            svgLight.classList.remove('active');
-            svgCanvas.classList.remove('active');
-        } else if (stageKey === 'lighting') {
-            svgProfile.classList.add('active');
-            svgLight.classList.add('active');
-            svgCanvas.classList.remove('active');
-        } else if (stageKey === 'canvas') {
-            svgProfile.classList.add('active');
-            svgLight.classList.add('active');
-            svgCanvas.classList.add('active');
-        }
-        stageDots.forEach(dot => {
-            dot.classList.toggle('active', dot.getAttribute('data-stage') === stageKey);
-        });
-    }
-
-    const stageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                activateSvgLayer(entry.target.getAttribute('data-stage'));
-            }
-        });
-    }, {
-        threshold: 0.4,
-        rootMargin: '-15% 0px -15% 0px'
-    });
-
-    stageBlocks.forEach(block => stageObserver.observe(block));
+    const founderCtaBtn = document.getElementById('founder-cta-btn');
 
     if (tabNextBtn) {
         tabNextBtn.addEventListener('click', () => {
             document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => document.getElementById('user-name').focus(), 800);
         });
+    }
+
+    if (founderCtaBtn) {
+        founderCtaBtn.addEventListener('click', scrollToForm);
     }
 
     // =========================================================================
@@ -260,11 +228,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isValid) {
             successClientName.textContent = nameVal;
             successClientPhone.textContent = phoneVal;
-            
+
+            // Send lead to Telegram bot
+            const tgMessage = `🏠 <b>Новая заявка ALEXWERK</b>\n\n👤 Имя: <b>${nameVal}</b>\n📞 Телефон: <b>${phoneVal}</b>`;
+            fetch('https://api.telegram.org/bot8713106366:AAF5zy1MDN0L7-wsyU8J12B6jg6AxaMH_rM/sendMessage', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: 957385270, text: tgMessage, parse_mode: 'HTML' })
+            }).catch(() => {});
+
             // Show modal
             successModal.classList.add('open');
             document.body.classList.add('no-scroll');
-            
+
             // Reset form
             leadForm.reset();
         }
