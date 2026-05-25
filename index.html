@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEXWERK — Натяжные потолки премиум-класса</title>
+    <meta name="description" content="Эксклюзивный монтаж натяжных потолков премиум-класса с теневым профилем EuroKRAAB и интегрированным световым дизайном по вашему проекту.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header (Секция 1) -->
+    <header class="header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" id="logo-link">ALEX<span class="gold-text">WERK</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#construction" class="nav-link">Конструкция</a></li>
+                    <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+79991234567" class="phone-link"><i class="fa-solid fa-phone"></i> +7 (999) 123-45-67</a>
+                <button class="btn btn-cta" id="header-cta-btn">Заказать расчет</button>
+                <button class="burger-menu" id="burger-toggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Modal -->
+    <div class="mobile-menu" id="mobile-menu-overlay">
+        <ul class="mobile-nav-list">
+            <li><a href="#about" class="mobile-nav-link">О нас</a></li>
+            <li><a href="#construction" class="mobile-nav-link">Конструкция</a></li>
+            <li><a href="#reviews" class="mobile-nav-link">Отзывы</a></li>
+            <li><a href="#contacts" class="mobile-nav-link">Контакты</a></li>
+            <li><a href="tel:+79991234567" class="mobile-phone-link"><i class="fa-solid fa-phone"></i> +7 (999) 123-45-67</a></li>
+            <li><button class="btn btn-cta btn-block" id="mobile-cta-btn">Заказать расчет</button></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section (Секция 2) -->
+    <section class="hero-section" id="about">
+        <div class="hero-bg" style="background-image: url('assets/images/review_4.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" id="hero-badge-item">ПРЕМИАЛЬНЫЙ СВЕТ И ДИЗАЙН</div>
+            <h1 class="hero-title" id="hero-main-title">ALEXWERK</h1>
+            <div class="hero-subtitle" id="hero-sub-title">АЛЕКС ВЕРК</div>
+            <p class="hero-description">
+                Интеграция передовых профильных систем, скрытого освещения и безупречных полотен по вашему индивидуальному дизайн-проекту.
+            </p>
+            <div class="hero-features">
+                <div class="feature-badge"><i class="fa-solid fa-gem"></i> Теневой шов EuroKRAAB</div>
+                <div class="feature-badge"><i class="fa-solid fa-lightbulb"></i> Световые сценарии</div>
+                <div class="feature-badge"><i class="fa-solid fa-shield-halved"></i> Безопасность Teqtum</div>
+            </div>
+            <div class="hero-actions-container">
+                <button class="btn btn-primary" id="hero-cta-btn">Заказать расчет</button>
+                <button class="btn btn-explore" id="hero-explore-btn">Смотреть работы <i class="fa-solid fa-arrow-down"></i></button>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="scroll-text">Прокрутить вниз</span>
+            <div class="scroll-icon-mouse">
+                <div class="scroll-icon-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Construction Section (Секция 3) -->
+    <section class="construction-section" id="construction">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-label">Конструкция</span>
+                <h2 class="section-title">Этапы создания потолка</h2>
+                <div class="title-separator"></div>
+            </div>
+
+            <div class="interactive-tabs-container">
+                <!-- Left Side: Interactive SVG (View from below diagonally) -->
+                <div class="tab-visual-side">
+                    <div class="schema-card">
+                        <svg id="ceiling-svg" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- Glow filters -->
+                                <filter id="glow-gold" x="-30%" y="-30%" width="160%" height="160%">
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <filter id="glow-amber" x="-30%" y="-30%" width="160%" height="160%">
+                                    <feGaussianBlur stdDeviation="12" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <!-- Light beam gradient -->
+                                <linearGradient id="beam-grad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffa500" stop-opacity="0.6" />
+                                    <stop offset="100%" stop-color="#ffa500" stop-opacity="0" />
+                                </linearGradient>
+                                <!-- Canvas texture glow -->
+                                <linearGradient id="canvas-glow-grad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="var(--accent-gold)" stop-opacity="0.25" />
+                                    <stop offset="50%" stop-color="var(--accent-gold)" stop-opacity="0.08" />
+                                    <stop offset="100%" stop-color="var(--accent-gold)" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Subtle perspective room corner walls outline for context -->
+                            <path d="M 50,420 L 50,220 L 250,100 L 250,420" fill="none" stroke="#1c1c1f" stroke-width="1" />
+                            <path d="M 450,420 L 450,220 L 250,100" fill="none" stroke="#1c1c1f" stroke-width="1" />
+
+                            <!-- LAYER 1: Profile Frame (Always active as base) -->
+                            <g id="svg-profile" class="svg-element active">
+                                <!-- Double perimeter lines showing shadow gap profile -->
+                                <polygon points="50,220 250,100 450,220 250,340" fill="none" stroke="#222" stroke-width="5" />
+                                <polygon points="50,220 250,100 450,220 250,340" fill="none" stroke="#3a3a3c" stroke-width="2" />
+                                <!-- Glowing active outline -->
+                                <polygon class="glow-effect" points="50,220 250,100 450,220 250,340" fill="none" stroke="var(--accent-gold)" stroke-width="2.5" opacity="0" filter="url(#glow-gold)" />
+                                
+                                <!-- Label Arrow -->
+                                <path class="arrow-marker" d="M 40,210 L 120,185" stroke="var(--accent-gold)" stroke-width="1" fill="none" />
+                                <circle cx="120" cy="185" r="2.5" fill="var(--accent-gold)" />
+                                <text class="step-label" x="30" y="214" fill="var(--accent-gold)" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" text-anchor="end">1. ПРОФИЛЬНЫЙ КАРКАС</text>
+                            </g>
+
+                            <!-- LAYER 2: Light (Layers over Profile) -->
+                            <g id="svg-light" class="svg-element">
+                                <!-- Recessed track slot -->
+                                <line x1="160" y1="180" x2="340" y2="180" stroke="#1c1c1e" stroke-width="8" stroke-linecap="round" />
+                                <line class="glow-effect" x1="160" y1="180" x2="340" y2="180" stroke="var(--accent-gold)" stroke-width="2.5" stroke-linecap="round" opacity="0" filter="url(#glow-gold)" />
+                                
+                                <!-- Modern ring light in the center -->
+                                <ellipse cx="250" cy="220" rx="70" ry="28" fill="none" stroke="#222" stroke-width="4" />
+                                <ellipse class="glow-effect" cx="250" cy="220" rx="70" ry="28" fill="none" stroke="#fff" stroke-width="2.5" opacity="0" filter="url(#glow-gold)" />
+                                
+                                <!-- Light beams -->
+                                <polygon class="light-beam" points="180,220 320,220 390,390 110,390" fill="url(#beam-grad)" opacity="0" style="mix-blend-mode: screen;" />
+
+                                <!-- Label Arrow -->
+                                <path class="arrow-marker" d="M 40,270 L 180,220" stroke="var(--accent-gold)" stroke-width="1" fill="none" />
+                                <circle cx="180" cy="220" r="2.5" fill="var(--accent-gold)" />
+                                <text class="step-label" x="30" y="274" fill="var(--accent-gold)" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" text-anchor="end">2. ИНТЕГРИРОВАННЫЙ СВЕТ</text>
+                            </g>
+
+                            <!-- LAYER 3: Ceiling Canvas (Layers over Profile & Light) -->
+                            <g id="svg-canvas" class="svg-element">
+                                <!-- Solid canvas covering ceiling boundary -->
+                                <polygon points="50,220 250,100 450,220 250,340" fill="rgba(245, 245, 247, 0.05)" />
+                                <!-- Glowing finished texture sheen -->
+                                <polygon class="glow-effect" points="50,220 250,100 450,220 250,340" fill="url(#canvas-glow-grad)" opacity="0" />
+                                <polygon class="glow-effect" points="50,220 250,100 450,220 250,340" fill="none" stroke="var(--accent-gold)" stroke-width="2.5" opacity="0" filter="url(#glow-gold)" />
+
+                                <!-- Label Arrow -->
+                                <path class="arrow-marker" d="M 40,330 L 150,290" stroke="var(--accent-gold)" stroke-width="1" fill="none" />
+                                <circle cx="150" cy="290" r="2.5" fill="var(--accent-gold)" />
+                                <text class="step-label" x="30" y="334" fill="var(--accent-gold)" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" text-anchor="end">3. НАТЯЖНОЕ ПОЛОТНО</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Right Side: Tabs and Content (Ensures all text is visible) -->
+                <div class="tab-text-side">
+                    <!-- Segmented tab triggers -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="profile">
+                            <span class="tab-num">01</span> Профиль
+                        </button>
+                        <button class="tab-btn" data-tab="lighting">
+                            <span class="tab-num">02</span> Свет
+                        </button>
+                        <button class="tab-btn" data-tab="canvas">
+                            <span class="tab-num">03</span> Потолок
+                        </button>
+                    </div>
+
+                    <!-- Tab content panes (fixed size, fits screen perfectly) -->
+                    <div class="tab-contents">
+                        
+                        <!-- Pane 1: Profile -->
+                        <div class="tab-pane active" id="pane-profile">
+                            <div class="pane-tag">Основа конструкции</div>
+                            <h3 class="pane-title">Высокотехнологичный профиль</h3>
+                            <p class="pane-text">
+                                Несущая конструкция по периметру стен. Мы устанавливаем оригинальный алюминиевый профиль <strong>EuroKRAAB</strong>, создающий безупречный теневой шов шириной 6 мм. 
+                            </p>
+                            <ul class="pane-list">
+                                <li><i class="fa-solid fa-check gold-text"></i> Ровный теневой зазор без резиновых маскировочных вставок</li>
+                                <li><i class="fa-solid fa-check gold-text"></i> Жесткий алюминиевый каркас предотвращает провисание</li>
+                                <li><i class="fa-solid fa-check gold-text"></i> Безупречная стыковка и геометрия углов любой сложности</li>
+                            </ul>
+                        </div>
+
+                        <!-- Pane 2: Light -->
+                        <div class="tab-pane" id="pane-lighting">
+                            <div class="pane-tag">Атмосфера и сценарии</div>
+                            <h3 class="pane-title">Интегрированный свет</h3>
+                            <p class="pane-text">
+                                Освещение монтируется в конструкцию согласно вашему дизайн-проекту. Мы интегрируем любые современные решения: магнитные треки, световые линии или контурные ниши.
+                            </p>
+                            <ul class="pane-list">
+                                <li><i class="fa-solid fa-check gold-text"></i> Магнитные шинопроводы для перестановки светильников</li>
+                                <li><i class="fa-solid fa-check gold-text"></i> Мягкая светодиодная подсветка по периметру шва</li>
+                                <li><i class="fa-solid fa-check gold-text"></i> Полная совместимость с системами «Умного дома»</li>
+                            </ul>
+                        </div>
+
+                        <!-- Pane 3: Canvas -->
+                        <div class="tab-pane" id="pane-canvas">
+                            <div class="pane-tag">Финишное покрытие</div>
+                            <h3 class="pane-title">Декоративное полотно</h3>
+                            <p class="pane-text">
+                                Натяжная плоскость премиум-класса. Вы можете выбрать матовое, глянцевое или сатиновое полотно, а также полотна с узором согласно вашей дизайнерской концепции.
+                            </p>
+                            <ul class="pane-list">
+                                <li><i class="fa-solid fa-check gold-text"></i> Экологически чистые полотна MSD Premium и Teqtum (класс А+)</li>
+                                <li><i class="fa-solid fa-check gold-text"></i> Противопожарная безопасность (сертификат класса KM2)</li>
+                                <li><i class="fa-solid fa-check gold-text"></i> Абсолютная влагостойкость и защита от протечек сверху</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Next button inside tabs to navigate easily -->
+                    <div class="tab-navigation">
+                        <button class="btn btn-primary" id="tab-next-btn">Далее <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Секция 4) -->
+    <section class="reviews-section" id="reviews">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-label">Портфолио проектов</span>
+                <h2 class="section-title">Отзывы клиентов & Реализованные объекты</h2>
+                <div class="title-separator"></div>
+            </div>
+
+            <!-- Review Cards Grid -->
+            <div class="reviews-grid">
+                
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-image-wrapper">
+                        <img src="assets/images/review_1.png" alt="Гостиная с трековым освещением и люстрой" class="review-img">
+                        <div class="review-image-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i> Увеличить</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="review-client">Александр Д.</h4>
+                        <span class="review-project">Дизайнерский свет в гостиной • Крестовский остров</span>
+                        <p class="review-text">
+                            «Обратился в Alex Werk по рекомендации дизайнера. Стояла задача установить теневой потолок и интегрировать большую кольцевую люстру по центру вместе с черными магнитными треками. Результат просто восхитительный. Монтажники сделали идеальные углы, зазор ровный как струна. Рекомендую.»
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-image-wrapper">
+                        <img src="assets/images/review_2.png" alt="Кухня со встроенной световой линией" class="review-img">
+                        <div class="review-image-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i> Увеличить</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="review-client">Екатерина М.</h4>
+                        <span class="review-project">Контурный свет на кухне • Петроградская сторона</span>
+                        <p class="review-text">
+                            «Световая линия, переходящая со стены на потолок — это хит моей новой квартиры. Ребята из Alex Werk спроектировали профиль так, чтобы рассеиватель смотрелся единым целым. Потолок матовый, очень благородный, от штукатурки не отличить. Сделали за 2 дня во всей квартире.»
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-image-wrapper">
+                        <img src="assets/images/review_3.png" alt="Темный коридор со встроенными световыми полосами" class="review-img">
+                        <div class="review-image-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i> Увеличить</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="review-client">Михаил К.</h4>
+                        <span class="review-project">Геометрический свет в прихожей • Васильевский остров</span>
+                        <p class="review-text">
+                            «Захотели в коридор темные стены и ломаные световые линии на потолке. Для такой работы нужны золотые руки, так как малейший косяк сразу виден при ярком свете. Мастера справились на отлично. Полотно натянули идеально, стыков светодиодных лент не видно вообще. Очень доволен качеством.»
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-image-wrapper">
+                        <img src="assets/images/review_4.png" alt="Гостиная с тремя люстрами-кольцами" class="review-img">
+                        <div class="review-image-overlay">
+                            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i> Увеличить</span>
+                        </div>
+                    </div>
+                    <div class="review-body">
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 class="review-client">Светлана В.</h4>
+                        <span class="review-project">Гостиная премиум-класса • Золотой треугольник</span>
+                        <p class="review-text">
+                            «Ребята монтировали потолки во всем доме, но гостиная — это любимое место. Сочетание скрытого карниза для штор с подсветкой, теневого профиля по краям и трех стильных колец-люстр выглядит безумно дорого и красиво. Сервис премиальный: вежливые менеджеры, чистая работа, гарантия 15 лет.»
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Reviews -->
+    <div class="lightbox" id="lightbox-modal">
+        <span class="lightbox-close" id="lightbox-close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Contact & Application Section (Секция 5) -->
+    <section class="contact-section" id="contacts">
+        <div class="section-container">
+            <div class="contact-grid">
+                
+                <!-- Left info column -->
+                <div class="contact-info">
+                    <span class="section-label">Свяжитесь с нами</span>
+                    <h2 class="contact-title">Обсудим детали вашего проекта</h2>
+                    <p class="contact-text">
+                        Запишитесь на профессиональный бесплатный замер и консультацию инженера. Мы привезем образцы профилей, полотен и светильников прямо к вам на объект.
+                    </p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-content">
+                                <h5>Офис продаж</h5>
+                                <p>Санкт-Петербург, Малый проспект П.С., д. 87, оф. 312</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-content">
+                                <h5>Телефон</h5>
+                                <p><a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-content">
+                                <h5>Электронная почта</h5>
+                                <p><a href="mailto:info@alexwerk.ru">info@alexwerk.ru</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form column -->
+                <div class="contact-form-container">
+                    <form class="lead-form" id="lead-form">
+                        <h3 class="form-title">Запись на замер</h3>
+                        <p class="form-subtitle">Заполните форму, и мы свяжемся с вами в течение 15 минут</p>
+                        
+                        <div class="form-group">
+                            <label for="user-name" class="form-label">Ваше имя</label>
+                            <input type="text" id="user-name" class="form-control" placeholder="Иван Иванов" required>
+                            <span class="error-msg" id="name-error">Пожалуйста, введите ваше имя</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-phone" class="form-label">Номер телефона</label>
+                            <input type="tel" id="user-phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+                            <span class="error-msg" id="phone-error">Введите корректный номер телефона</span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="user-agreement" required checked>
+                            <label for="user-agreement" class="checkbox-label">
+                                Я согласен на обработку персональных данных в соответствии с <a href="#" class="gold-text">политикой конфиденциальности</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-lead-btn">
+                            Оставить заявку <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <button class="modal-close" id="success-modal-close-btn">&times;</button>
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3 class="modal-title">Заявка успешно принята!</h3>
+                <p class="modal-text">
+                    Спасибо, <span id="success-client-name" class="gold-text font-weight-bold"></span>. 
+                    Наш технический специалист уже получил уведомление и свяжется с вами по номеру 
+                    <span id="success-client-phone" class="gold-text font-weight-bold"></span> 
+                    в течение 15 минут для подтверждения времени замера.
+                </p>
+                <button class="btn btn-primary" id="success-modal-ok-btn">Отлично</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo-section">
+                <a href="#" class="logo">ALEX<span class="gold-text">WERK</span></a>
+                <p class="footer-tagline">Натяжные потолки премиального качества с гарантией 15 лет</p>
+            </div>
+            <div class="footer-links">
+                <h5>Разделы</h5>
+                <ul>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#construction">Технология</a></li>
+                    <li><a href="#reviews">Наши работы</a></li>
+                    <li><a href="#contacts">Запись на замер</a></li>
+                </ul>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 ALEXWERK. Все права защищены.</p>
+                <p class="developer-credit">Разработано с акцентом на качество</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
