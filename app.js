@@ -89,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
         founderCtaBtn.addEventListener('click', scrollToForm);
     }
 
+    const pricingCtaBtn = document.getElementById('pricing-cta-btn');
+    const pricingFreeBtn = document.getElementById('pricing-free-btn');
+    if (pricingCtaBtn) pricingCtaBtn.addEventListener('click', scrollToForm);
+    if (pricingFreeBtn) pricingFreeBtn.addEventListener('click', scrollToForm);
+
     // =========================================================================
     // 4. PORTFOLIO LIGHTBOX / MODAL VIEWER
     // =========================================================================
