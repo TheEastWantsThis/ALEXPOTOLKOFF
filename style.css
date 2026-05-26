@@ -606,6 +606,14 @@ section {
     display: block;
 }
 
+.stage-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .schema-label {
     margin-top: 12px;
     padding-top: 12px;
